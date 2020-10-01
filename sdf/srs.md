@@ -68,86 +68,99 @@ The front end shall allow clients to interact with the application. They shall h
 
   5.3.1.7 The Home Page shall have a link to the Create Account page CSU.
 
-  5.3.1. The Create Account page shall have text entry fields for new user information.
+  5.3.1.8 The Create Account page shall have text entry fields for new user information.
 
-  5.3.1. The Create Account page shall provide error checking on the text entry fields such that the user is provided immediate feedback in case of erroneous entry.
+  5.3.1.9 The Create Account page shall provide error checking on the text entry fields such that the user is provided immediate feedback in case of erroneous entry.
 
-  5.3.1. The User Account page shall be accessed right after creating an account or logging into an existing account.
+  5.3.1.10 The User Account page shall be accessed right after creating an account or logging into an existing account.
 
-  5.3.1. The User Account page shall list previews of the users' 10 most-recently created pre-existing photoshoots objects and links to the View Objects page for each one.
+  5.3.1.11 The User Account page shall list previews of the users' 10 most-recently created pre-existing photoshoots objects and links to the View Objects page for each one.
 
-  5.3.1. If the user has no objects, the User Account page shall display a link to the Create Object page.
+  5.3.1.12 If the user has no objects, the User Account page shall display a link to the Create Object page.
 
-  5.3.1. The Create Object page shall have text entry fields for entering the information of the photoshoot.
+  5.3.1.13 The Create Object page shall have text entry fields for entering the information of the photoshoot.
 
-  5.3.1. The Create Object page shall provide file upload prompts for business documents and a preview picture.
+  5.3.1.14 The Create Object page shall provide file upload prompts for business documents and a preview picture.
 
-  5.3.1. The Create Object page shall provide error checking on the text entry fields and the uploaded file types such that the user is provided immediate feedback in case of erroneous entry.
+  5.3.1.15 The Create Object page shall provide error checking on the text entry fields and the uploaded file types such that the user is provided immediate feedback in case of erroneous entry.
 
-  5.3.1. The Create Object page shall have a save button that sends the user to the View Object page.
+  5.3.1.15 The Create Object page shall have a save button that sends the user to the View Object page.
 
-  5.3.1. The Search Tags CSU shall be accessed from initiating a search from the banner at the top of any page in the Front End CSC.
+  5.3.1.16 The Search Tags CSU shall be accessed from initiating a search from the banner at the top of any page in the Front End CSC.
 
-  5.3.1. The Search Tags CSU shall display the text entry of the query provided by the user.
+  5.3.1.17 The Search Tags CSU shall display the text entry of the query provided by the user.
 
-  5.3.1. The Search Tags CSU shall provide a right-side panel with filtering and sorting options.
+  5.3.1.18 The Search Tags CSU shall provide a right-side panel with filtering and sorting options.
 
-  5.3.1. The Search Tags CSU shall display the results of the search query below the search bar entry in a list with the default sorting by most recent by photoshoot date.
+  5.3.1.19 The Search Tags CSU shall display the results of the search query below the search bar entry in a list with the default sorting by most recent by photoshoot date.
 
-  5.3.1. The Search Tags CSU shall refresh the results after changes are indicated in the text entry by pressing 'Enter' or in the side panel by pressing an 'Save' button.
+  5.3.1.20 The Search Tags CSU shall refresh the results after changes are indicated in the text entry by pressing 'Enter' or in the side panel by pressing an 'Save' button.
 
-  5.3.1. The Search Tags CSU shall display each query result with a preview picture and a link to the View Object page.
+  5.3.1.21 The Search Tags CSU shall display each query result with a preview picture and a link to the View Object page.
 
-  5.3.1. The View Object page shall display all information associated with that object.
+  5.3.1.22 The View Object page shall display all information associated with that object.
 
-  5.3.1. The View Object page shall have an 'Edit' button that takes the user to the Create Object page.
+  5.3.1.23 The View Object page shall have an 'Edit' button that takes the user to the Create Object page.
 
-  5.3.1. The View Object page shall have a delete button that allows the user to remove the object from their account.
+  5.3.1.24 The View Object page shall have a delete button that allows the user to remove the object from their account.
 
 5.3.2 Server CSC
 
 The Server CSC shall transmit information from the user input to the Database CSC and vice versa.
 
-  5.3.2. The Server CSC shall insert objects into the Database CSC based on input from the Front End CSC.
+  5.3.2.1 The Server CSC shall insert objects into the Database CSC based on input from the Front End CSC.
 
-  5.3.2. The Server CSC shall edit objects in the Database CSC based on input from the Front End CSC.
+  5.3.2.2 The Server CSC shall edit objects in the Database CSC based on input from the Front End CSC.
 
-  5.3.2. The Server CSC shall remove objects from the Database CSC based on input from the Front End CSC.
+  5.3.2.3 The Server CSC shall remove objects from the Database CSC based on input from the Front End CSC.
 
-  5.3.2. The Server CSC shall validate search queries received by the Front End CSC.
+  5.3.2.3 The Server CSC shall validate search queries received by the Front End CSC.
 
-  5.3.2. The Server CSC shall track the User ID while performing queries to ensure information is secure.
+  5.3.2.3 The Server CSC shall track the User ID while performing queries to ensure information is secure.
 
-  5.3.3. The Server CSC shall reject requests to remove or edit objects if the User ID of the objects does not match the User ID of the user making the request.
+  5.3.2.3 The Server CSC shall reject requests to remove or edit objects if the User ID of the objects does not match the User ID of the user making the request.
 
-  5.3.2. The Server CSC shall query the Database CSC using the information received from the Front End CSC.
+  5.3.2.4 The Server CSC shall query the Database CSC using the information received from the Front End CSC.
 
-  5.3.2. The Server CSC shall manipulate the result of queries to a useable format.
+  5.3.2.5 The Server CSC shall manipulate the result of queries to a useable format.
 
-  5.3.2. The Server CSC shall send the result back to the Front End CSC.
+  5.3.2.6 The Server CSC shall send the result back to the Front End CSC.
 
 5.3.3 Database CSC
 
 The Database CSC shall store information on the photoshoot objects, the users, the files, and the tags.
 
-  5.3.3. The Database CSC shall be made in PostgreSQL.
+  5.3.3.1 The Database CSC shall be made in PostgreSQL.
 
-  5.3.3. The Database CSC shall consist of 3 tables.
+  5.3.3.2 The Database CSC shall consist of 3 tables.
 
-  5.3.3. The Database CSC shall have a table containing entries for all users, known as the User Info Database.
+  5.3.3.3 The Database CSC shall have a table containing entries for all users, known as the User Info Database.
 
-  5.3.3. The User Info Database shall have an object ID in the form of an integer as a primary key.
+  5.3.3.4 The User Info Database shall have an object ID in the form of an integer as a primary key.
 
-  5.3.3. The Database CSC shall have a table containing all photoshoot objects, known as the Photoshoot Objects Database.
+  5.3.3.5 The Database CSC shall have a table containing all photoshoot objects, known as the Photoshoot Objects Database.
 
-  5.3.3. The Photoshoot Objects Database shall have an object ID in the form of an integer as a primary key.
+  5.3.3.6 The Photoshoot Objects Database shall have an object ID in the form of an integer as a primary key.
 
-  5.3.3. The Photoshoot Objects Database shall have a column that contains the unique ID from the User Info Database of the user who created the object.
+  5.3.3.7 The Photoshoot Objects Database shall have a column that contains the unique ID from the User Info Database of the user who created the object.
 
-  5.3.3. The Photoshoot Objects Database shall have a column containing a JSON object of all of the tag IDs.
+  5.3.3.8 The Photoshoot Objects Database shall have a column containing a JSON object of all of the tag IDs.
 
-  5.3.3. The Photoshoot Objects Database shall return objects in queries only if the User ID from the query matches the User ID in all results.
+  5.3.3.9 The Photoshoot Objects Database shall return objects in queries only if the User ID from the query matches the User ID in all results.
 
-  5.3.3. The Database CSC shall have a table containing entries for all tags used in photoshoots called the Tags Database.  
+  5.3.3.10 The Database CSC shall have a table containing entries for all tags used in photoshoots called the Tags Database.  
 
-  5.3.3. The Tags Database shall assign unique IDs to each tag used by any user as a primary key.
+  5.3.3.11 The Tags Database shall assign unique IDs to each tag used by any user as a primary key.
+
+##### 5.4 Performance Requirements
+
+5.4.1 First search results from tag search are displayed within 20 seconds.
+From the time the user initiates a new tag search, including filter changes, the preview photo and link of the first search result should have appeared.
+
+5.4.2 Photos on the User Profile are displayed within 10 seconds.
+The most recent photoshoots (by object creation date) made by the user that is logged in will be displayed with the preview photo and the link to the View Object page associated with it.  
+
+5.4.3 Photoshoot information on the View Object page is displayed within 10 seconds.
+The View Objects page takes all the information associated with a photoshoot and displays it, including the preview photo and links to downloading the documents associated with the object.
+
+#####  
