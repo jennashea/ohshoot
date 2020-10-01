@@ -106,7 +106,7 @@ The front end shall allow clients to interact with the application. They shall h
 
 5.3.2 Server CSC
 
-The Server CSC shall transmit information from the user input to the Database CSC and vice versa.
+The Server CSC shall transmit information from the user input to the Database CSC and vice versa. The Server CSC shall use GraphQL to accomplish this task.
 
   5.3.2.1 The Server CSC shall insert objects into the Database CSC based on input from the Front End CSC.
 
@@ -163,4 +163,12 @@ The most recent photoshoots (by object creation date) made by the user that is l
 5.4.3 Photoshoot information on the View Object page is displayed within 10 seconds.
 The View Objects page takes all the information associated with a photoshoot and displays it, including the preview photo and links to downloading the documents associated with the object.
 
-#####  
+##### 5.5 Project Environment Requirements
+
+5.5.1 Development Environment Requirements
+
+The developers must have access to a computer or cloud instance capable of running the server needed for the databases and displaying the web pages. The computers should also be able to handle high intensity database queries. The computers must have downloaded the following software/modules: PostgreSQL, GraphQL, React, and some form of linter.
+
+5.5.2 Execution Environment Requirements
+
+Users can access the web app with any standard web browser. 
