@@ -1,0 +1,39 @@
+
+
+Group 11: [solo approved]
+   Jenna Berlinberg
+      synopsis:   Oh, Shoot!  Photo storage through a new lens
+=====================================================================================
+Very nice work on this deliverable!  Just a couple of things to add on for the
+second submission by semester's end.
+
+The schedule in your SDP still says "(graphic in progress)".  Needs to be
+completed.
+
+No diagram of the system in the SRS.  Needs to be completed.
+
+CSCI breakdown is good!  You have a lot of parts, which shows you have put
+plenty of thought into this project.
+
+Be careful with requirements like 5.3.1.3 ~ if you say "6 web pages" that may
+get taken to mean you can display ANY 6 web pages.  A "will" statement could
+help elucidate what six pages you mean.
+
+Generally, try to be more specific about the requirements. Use the sections
+from the CSCI breakdown as headers to each section of functional requirements
+so that they align.  You have the CSC's in there, but not the CSU's.
+
+Be careful of the word "and" which usually means you need to split that
+statement into at least two requirements.
+
+Otherwise, nice work!  Excellent job on the breakdown, Jenna!
+
+Make those document organization changes and maybe add a few requirements to
+the functional section by the end of the semester and you'll have full credit
+for this portino of the project!
+
+Evaluation score:
+
+    9% out of 10% for this deliverable:  A-minus
+
+
