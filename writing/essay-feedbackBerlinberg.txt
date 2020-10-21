@@ -1,0 +1,42 @@
+
+
+Essay Feedback
+Homework Assignment #1
+"New Spectre Cyberthreat Evades Patches"
+   by Holly Ober
+Jenna Berlinberg
+October 6, 2020
+===========================================================
+
+This is an interesting article and I'm glad you picked it to write about!
+You did a great job of relating the important article points, and although
+it was a rather short article, you nailed them.
+
+I think your point about the designers balancing attention to detail with
+limited resources is VERY important.  It's a "penny-wise, pound-foolish"
+situation in some respects, but you allude to the fact of limited resources
+having to be balanced against perceived likelihood of malintention, which is
+something that software designers must deal with on every project.  You also
+bring out the sophistication required to use this exploit, which is another
+important point.
+
+I'm not sure I agree with your "either/or" scenario of "dropping speculative
+execution altogether", though.  I wonder if the designers might have been
+able to apply the Retpoline patch from the outset ~ perhaps at a slightly
+increased resource load.  Perhaps not.
+
+All-in-all, though, your essay is an interesting read!
+
+Nice work, Jenna.
+
+Category                           Rating
+Good summary of article             25.0
+Relation to S/W engineering         25.0
+Own thoughts/opinions presented     25.0
+Spelling/Grammar                    25.0
+
+Subtotal                           100.0
+------------------------------------------------------
+Total Percentage:    100 out of 100 which is an A-plus
+
+
