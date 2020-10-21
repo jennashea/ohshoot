@@ -27,7 +27,7 @@ Oh, Shoot! is a web-based DBMS system for professional photographers to organize
 ##### 6.4 Database Design and Description
 6.4.1     Database Design ER Diagram
 
-![Database Schema](/img/schema.png)
+![Database Schema](/sdf/img/schema.png)
 
 6.4.2     Database Access
 6.4.3     Database Security
