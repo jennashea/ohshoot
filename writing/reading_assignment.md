@@ -29,19 +29,21 @@ Write one-sentence answers to the following questions:
 What is your opinion on the following statements, and why do you feel that way:
 
 > All assumptions are bad, and no assumption is a good assumption.
+There's a related idiom- "Assumptions make an ass of you and me." Assumptions not only make you feel dumb or might make you place blame on the customer for not being specific enough, the customer also might feel dumb for not communicating their goals clearly or place blame on you for not reading their mind or asking for clarification. It is always better to try to clear things up to avoid this sort of issue. 
 
 > A big user story estimate is a bad user story estimate.
+This seems to be a good way to check yourself on whether or not your user story is too broad. The book specifies >15 days as too much, but others believe even 7 days is a sign that you should break down the user story more. It also provides room for a sanity check with the customer, which might reveal crucial assumptions  
 
 ##### Problem 6
 Fill in the blanks in the statements below, using the following things [you can use each thing for more than one statement]: Blueskying; Role playing; Observation; User story; Estimate; Planning poker.
 
-- You can dress me up as a use case for a formal occasion: __ans__
-- The more of me there are, the clearer things become: __ans__
-- I help you capture EVERYTHING: __ans__
-- I help you get more from the customer: __ans__
-- In court, I'd be admissible as firsthand evidence: __ans__
-- Some people say I'm arrogant, but really I'm just about confidence: __ans__
-- Everyone's involved when it comes to me: __ans__
+- You can dress me up as a use case for a formal occasion: User Story
+- The more of me there are, the clearer things become: User Story
+- I help you capture EVERYTHING: Blueskying
+- I help you get more from the customer: Role playing
+- In court, I'd be admissible as firsthand evidence: Observation
+- Some people say I'm arrogant, but really I'm just about confidence: Estimate
+- Everyone's involved when it comes to me: Blueskying
 
 ##### Problem 7
 Explain what is meant by a better than best-case estimate.
