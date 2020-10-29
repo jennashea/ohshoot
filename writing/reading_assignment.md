@@ -13,23 +13,34 @@ The two major concerns of any software project is the cost of the project and th
 ##### Problem 2
 In the Agile method for software development, what are the four main phases that occur in each and every iteration? Do you feel that any of them could be done at the start of the project and not be repeated in every iteration? Do you feel that would save time overall on the project? Justify your answers with a brief explanation.
 
+The four main phases are requirements, design, code, and test. I prefer having a temporary set of overall requirements and design that is then broken down within the iterations. In between each iteration, the requirements and design will be revisited and updated with any of the changes made with the code checks.
+
 ##### Problem 3
 In the Waterfall method for software development, what are the main phases that occur? How are they different from the phases in the Agile method? What other phases are in Waterfall that are left out of Agile? Do you think these are needed in Waterfall? Describe a situation using Agile in which one of these extra Waterfall phases might me needed.
+
+The main phases are requirement analysis, system design, implementation, testing, deployment, and maintenance. The iterations in Agile each contain bite-size and targeted pieces of the first four, while Waterfall prefers the whole shebang be done. This makes adapting changes that the  customer inevitably will request a lengthy process. Maintenance might still be needed in an Agile method, but it would be require less significant changes and thus take less time. However, this sort of approach might be imperative when firm documentation is required, such as in high-risk industries involving government contracts.
 
 ##### Problem 4
 Write one-sentence answers to the following questions:
 
 - What is a user story?
+A user story is a requirement stated in the lens of the client using the software.
+
 - What is blueskying?
+Blueskying is meeting with all people involved in the project, including the customer, where they throw out ideas for the project without any restrictions on their thought processes. Sky's the limit!
+
 - What are four things that user stories SHOULD do?
+A user story should describe one function the customer requests of the software, be written in a way that makes sense to the customer, be written by the customer, and be short- no more than 3 sentences.
+
 - What are three things that user stories SHOULD NOT do?
+User stories should not be a long essay, use technical terms that would confuse the customer, or mention specific technologies. 
 
 ##### Problem 5
 
 What is your opinion on the following statements, and why do you feel that way:
 
 > All assumptions are bad, and no assumption is a good assumption.
-There's a related idiom- "Assumptions make an ass of you and me." Assumptions not only make you feel dumb or might make you place blame on the customer for not being specific enough, the customer also might feel dumb for not communicating their goals clearly or place blame on you for not reading their mind or asking for clarification. It is always better to try to clear things up to avoid this sort of issue. 
+There's a related idiom- "Assumptions make an ass of you and me." Assumptions not only make you feel dumb or might make you place blame on the customer for not being specific enough, the customer also might feel dumb for not communicating their goals clearly or place blame on you for not reading their mind or asking for clarification. It is always better to try to clear things up to avoid this sort of issue.
 
 > A big user story estimate is a bad user story estimate.
 This seems to be a good way to check yourself on whether or not your user story is too broad. The book specifies >15 days as too much, but others believe even 7 days is a sign that you should break down the user story more. It also provides room for a sanity check with the customer, which might reveal crucial assumptions  
