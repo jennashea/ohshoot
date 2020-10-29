@@ -66,6 +66,7 @@ I would do it as soon as possible once the estimate has been confidently calcula
 
 ##### Problem 9
 Discuss why you think branching in your software configuration is bad or good. Describe a scenario to support your opinion.
+Branching is an extremely helpful tool in significant group projects where asynchronous work on multiple different files is needed. It can be tedious and hard to adjust to when you first encounter it, but it's a lifesaver in massive projects. It might be not worth the time configuring it for smaller projects (both people and code) that are mostly done synchronously or completely separate. A freshman year intro class group project where the group has split the work out in fourths and are all in separate files might not need four different branches. 
 
 
 ##### Problem 10
