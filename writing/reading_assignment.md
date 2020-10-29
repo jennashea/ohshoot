@@ -33,7 +33,7 @@ Blueskying is meeting with all people involved in the project, including the cus
 A user story should describe one function the customer requests of the software, be written in a way that makes sense to the customer, be written by the customer, and be short- no more than 3 sentences.
 
 - What are three things that user stories SHOULD NOT do?
-User stories should not be a long essay, use technical terms that would confuse the customer, or mention specific technologies. 
+User stories should not be a long essay, use technical terms that would confuse the customer, or mention specific technologies.
 
 ##### Problem 5
 
@@ -58,9 +58,11 @@ Fill in the blanks in the statements below, using the following things [you can 
 
 ##### Problem 7
 Explain what is meant by a better than best-case estimate.
+A programmer would give you an estimate with assumption of perfect conditions- they can work straight with no interruptions, will make no mistakes as they go, testing isn't their problem, etc. This does not take into account the real life requirements that come from working in a team, taking care of issues that don't involve work, and more. This estimate is way too short for reality and you'd give the customer an incorrect assumption of software development.
 
 ##### Problem 8
 In your opinion, when would be the best time to tell your customer that you will NOT be able to meet her delivery schedule? Why do you feel that is the best time? Do you think that would be a difficult conversation?
+I would do it as soon as possible once the estimate has been confidently calculated and you can effectively communicate the thought process between the calculations. This way, little time is lost and the plan can be reworked with the input of the customer. Your team might have recommended they put off one user story that they would prefer over one you had kept in the schedule, so getting that input would be valuable. It would be a difficult conversation since most humans hate letting people down, and the customer is in a position where their satisfaction is imperative to your job security.
 
 ##### Problem 9
 Discuss why you think branching in your software configuration is bad or good. Describe a scenario to support your opinion.
