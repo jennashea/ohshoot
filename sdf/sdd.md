@@ -17,14 +17,14 @@ Users can access the web app with any standard web browser.
 6.1.2.1 React Native version 0.63.3
 The front end of the web app will be written in React Native.
 
-###### 6.1.2.2 PostgreSQL version 13.0
+6.1.2.2 PostgreSQL version 13.0
 The databases for the app use the PostgreSQL server.
 
 6.1.2.3 GraphQL
-GraphQL allows easy communication with PostgreSQL databases.
+GraphQL allows easy communication with PostgreSQL databases with a customizable API.
 
 6.1.2.4 Apollo Client version 2.6.10
-Apollo is a client that helps you build UI components that connect to a GraphQL back-end and has well-documented React integration.
+Apollo Client is a JavaScript data management library that manages the state of communication with the GraphQL back-end.
 
 6.1.2.5 User authentication database
 TBD
@@ -37,7 +37,9 @@ The Server shall transmit information from the user input to the Database and vi
 The Database shall store information on the photoshoot objects, the users, the files, and the tags.
 
 6.2.2 Major Software Interactions
-The major software interactions between components
+The major software interactions between components are completed in the pipeline between the Front End and the Database.
+The Front End receives user input from the UI made in React and communicates it to the Apollo Client. The Apollo Client sends queries to the GraphQL server. GraphQL executes the query in the PostgreSQL database.
+GraphQL receives the result and passes it to the Apollo Client. The Apollo Client caches the data and automatically updates the UI component that will display the output.
 
 6.2.3 Architectural Design Diagrams
 ![Architectural Design](/sdf/img/arch_design.png)
