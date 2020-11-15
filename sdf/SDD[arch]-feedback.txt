@@ -1,0 +1,31 @@
+
+
+Group 11: [solo approved]
+   Jenna Berlinberg
+      synopsis:   Oh, Shoot!  Photo storage through a new lens
+=====================================================================================
+This is good work, Jenna.  I like the way you have parsimoniously described
+the parts.  The diagrams show how they interact well, and the database
+design is pretty clear.  You've jumped ahead a little, since you only need
+the architecture level sections for this deliverable, but it never hurts to
+get a jump on the next deliverable, right?
+
+One thing to fix is the "shall" language.  That kind of statement belongs
+in the requirements document, not in the design document.  Also, try to use
+present tense in your descriptions throughout.  You have some present and
+some future, which makes the readers [e.g. the developers] think you haven't
+settled on the design yet.
+
+For your detailed design, you should consider changing the database diagram
+to an actual Entity-Relationship Diagram.  I can help you with that if you
+like, or I'm sure Dondi can help you put that together.
+
+All in all, nice work!  Make the changes indicated above by the end of the
+semester for full credit on this deliverable.
+
+
+Evaluation score:
+
+    9.5% out of 10% for this deliverable:  A
+
+
