@@ -4,7 +4,10 @@
   "description": "Jenna Berlinberg CMSI401 Final Project",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
