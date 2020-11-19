@@ -81,6 +81,7 @@ use()
 6.3.1.4 Apollo Client Class
 This class uses query and caching help from the Apollo Client.
 client: the Apollo client
+schema: GraphQL API schema
 readFragment()
 readQuery()
 useQuery()
@@ -114,8 +115,38 @@ This class displays the front page.
 6.3.1.10 Navigation Class
 This class deals with navigation between pages, primarily displayed in the banner.
 
-
 #### 6.3.2 Detailed Interface Descriptions
+The following sections provide the details of all interfaces used in the Oh, Shoot! application.
+
+6.3.2.1 Photoshoot Objects Interface
+This interface sends query results to Shoot Display Interface and Display Search Tags Interface and executes CMD commands from Shoot Display Interface.
+
+6.3.2.2 Shoot Display Interface
+This interface sends queries and CMD instructions to the Photoshoot Objects Interface.
+
+6.3.2.3 Express Server Interface
+This interface creates the GraphQL server for the Apollo Client interface.
+
+6.3.2.4 Apollo Client Interface
+This interface receives schema and query instructions from Tags and Photoshoot Object Interfaces and sends them to the Express Server Interface.
+
+6.3.2.5 React App Interface
+This interface renders information from the Shoot Display, Display Search Tags, Home Display, and Navigation Interfaces.
+
+6.3.1.6 Tags Interface
+This interface sends query results to Search Tags Interface and executes CMD commands from .
+
+6.3.1.7 Search Tags Interface
+This interface sends queries to Tags Interface and sends results to the Display Tag Interface.  
+
+6.3.1.8 Display Search Tags Interface
+This interface sends results to Shoot Display and React App Interfaces and sends sort and filter requests to the Search Tags Interface.
+
+6.3.1.9 Home Display Interface
+
+
+6.3.1.10 Navigation Interface
+
 #### 6.3.3 Detailed Data Structure Descriptions
 #### 6.3.4 Detailed Design Diagrams
 
