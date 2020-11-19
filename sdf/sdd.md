@@ -14,22 +14,22 @@ The developers must have access to a computer or cloud instance capable of runni
 
 Users can access the web app with any standard web browser.
 
-  __6.1.2.1__ React.js version 6.14.7
+  __6.1.2.1__ React.js version 17.0.1
 The front end of the web app will be written in React.js with hooks.
 
   __6.1.2.2__ PostgreSQL version 13.0
 The databases for the app use the PostgreSQL server.
 
-  __6.1.2.3__ GraphQL
+  __6.1.2.3__ GraphQL version 15.4.0
 GraphQL allows easy communication with PostgreSQL databases with a customizable API.
 
-  __6.1.2.3__ Express
-Express starts a server for the GraphQL API.
+  __6.1.2.4__ Express version 4.17.1
+Express is a web service framework for JavaScript that works well with GraphQL.
 
-  __6.1.2.4__ Apollo Client version 2.6.10
+  __6.1.2.5__ Apollo Client version 2.6.10
 Apollo Client is a JavaScript data management library that manages the state of communication with the GraphQL back-end.
 
-  __6.1.2.5__ User authentication database
+  __6.1.2.6__ User authentication database
 TBD time allowing.
 
 ### 6.2 Architectural Design
@@ -50,6 +50,9 @@ GraphQL receives the result and passes it to the Apollo Client. The Apollo Clien
 
 due week 10
 ### 6.3. CSC and CSU Descriptions
+The CSCs are the Front End CSC, the Back End CSC, and the Database CSC.
+The Front End CSC consists of the
+
 #### 6.3.1 Class Descriptions
 6.3.1.1 Detailed Class Description 1
 6.3.1.n Detailed Class Description n
@@ -60,7 +63,7 @@ due week 10
 ### 6.4 Database Design and Description
 #### 6.4.1 Database Design ER Diagram
 
-![Database Schema](/sdf/img/schema.png)
+![Database Schema](/sdf/img/db_erd.png)
 
 #### 6.4.2 Database Access
 #### 6.4.3 Database Security
