@@ -50,12 +50,71 @@ GraphQL receives the result and passes it to the Apollo Client. The Apollo Clien
 
 due week 10
 ### 6.3. CSC and CSU Descriptions
+**Italics means for next semester.**
 The CSCs are the Front End CSC, the Back End CSC, and the Database CSC.
-The Front End CSC consists of the
+The Front End CSC consists of the Home Page CSU, **Create Account CSU, User Profile CSU,** Search Tags CSU, View Object CSU, and Banner CSU.
+The Back End CSC consists of the Apollo Client CSU, Express GraphQL CSU, GraphQL API CSU, **and the User Info CSU.**
+The Database CSC consists of the **User Database CSU**, Photoshoot Objects Database CSU, and the Tags Database CSU.
 
 #### 6.3.1 Class Descriptions
-6.3.1.1 Detailed Class Description 1
-6.3.1.n Detailed Class Description n
+The following sections provide the details of all classes used in the Oh, Shoot! application.
+
+6.3.1.1 Photoshoot Objects Class
+This class represents the information on a given photoshoot object.
+
+
+6.3.1.2 Shoot Display Class
+This class displays information from the above class and reacts to input that might manipulate it.
+
+createShoot()
+deleteShoot()
+displayInfo()
+editInfo()
+
+6.3.1.3 Express Server Class
+This class runs the GraphQL server.
+app: Express server
+root: provides resolver function for each API endpoint.
+schema: provide GraphQL API schema  
+use()
+
+6.3.1.4 Apollo Client Class
+This class uses query and caching help from the Apollo Client.
+client: the Apollo client
+readFragment()
+readQuery()
+useQuery()
+writeFragment()
+writeQuery()
+cache: instance of the clients' `InMemoryCache` class.
+identify()
+modify()
+
+6.3.1.5 React App Class
+This class represents components from the React app.
+
+6.3.1.6 Tags Class
+This class represents the information on a tag.
+
+6.3.1.7 Search Tags Class
+This class handles queries of the tags database.
+filterOptions: represents the filter options provided or default to none
+sortOptions: represents the sort options provided or default to recent
+limit: represents the limit of results
+
+6.3.1.8 Display Search Tags Class
+This class displays results from the search and communicates modification inputs.
+result: collection of objects resulting from query
+filter()
+sort()
+
+6.3.1.9 Home Display Class
+This class displays the front page.
+
+6.3.1.10 Navigation Class
+This class deals with navigation between pages, primarily displayed in the banner.
+
+
 #### 6.3.2 Detailed Interface Descriptions
 #### 6.3.3 Detailed Data Structure Descriptions
 #### 6.3.4 Detailed Design Diagrams
