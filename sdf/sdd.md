@@ -143,9 +143,10 @@ This interface sends queries to Tags Interface and sends results to the Display 
 This interface sends results to Shoot Display and React App Interfaces and sends sort and filter requests to the Search Tags Interface.
 
 6.3.1.9 Home Display Interface
-
+This interface supplies information to the React App interface.
 
 6.3.1.10 Navigation Interface
+This interface supplies information to the React App interface.
 
 #### 6.3.3 Detailed Data Structure Descriptions
 #### 6.3.4 Detailed Design Diagrams
