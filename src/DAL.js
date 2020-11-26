@@ -5,7 +5,12 @@ var schema = buildSchema(`
   type Shoot {
     id: int,
     name: String,
-    client: String
+    client: String,
+    subject: String,
+    shoot_date: Date,
+    shoot_loc: String,
+    storage_loc: String,
+    tags: [int]
   }
 `);
 
