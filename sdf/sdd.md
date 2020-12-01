@@ -156,11 +156,21 @@ This interface supplies information to the React App interface.
 #### 6.3.4 Detailed Design Diagrams
 
 ### 6.4 Database Design and Description
+The database for this app has three tables in a PosgreSQL server. The three tables are `shoot`, `tags`, and   `shoot_tag`. The `shoot` table contains all info about each shoot object as one row and the assigned id as the primary key. The `tags` table contains the unique string of the tag as a row and the assigned id as the primary key. The `shoot_tag` table contains all relationships between shoots and tags using their ids as foreign keys. 
+
 #### 6.4.1 Database Design ER Diagram
 
 ![Database Schema](/sdf/img/db_erd.png)
 
 #### 6.4.2 Database Access
+The database will be accessed through GraphQL and Apollo client. 
+
+The `shoot` table can have a row added to it when a new shoot is created, can have a row edited when any info of the shoot is edited, and can have a row deleted if the shoot is deleted. The queries involving this table include fetching information on individual shoots based on id which can be further sorted. 
+
+The `tags` table will be added to when a new unique tag string is added to any shoot. If the tag is not new, then no further action is needed.
+
+Any addition to the tags of a shoot will add a row to the `shoot_tags` table and any removal of a tag from the shoot will delete the row associated. 
+
 #### 6.4.3 Database Security
 
 __Database security will be addressed further in 402.__
