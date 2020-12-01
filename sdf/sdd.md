@@ -29,7 +29,10 @@ Express is a web service framework for JavaScript that works well with GraphQL.
   __6.1.2.5__ Apollo Client version 2.6.10
 Apollo Client is a JavaScript data management library that manages the state of communication with the GraphQL back-end.
 
-  __6.1.2.6__ User authentication database
+  __6.1.2.6__ Material UI version 4.11.1 
+ Material UI is a React component library
+
+  __6.1.2.7__ User authentication database
 TBD time allowing.
 
 ### 6.2 Architectural Design
@@ -59,93 +62,94 @@ The Database CSC consists of the **User Database CSU**, Photoshoot Objects Datab
 #### 6.3.1 Class Descriptions
 The following sections provide the details of all classes used in the Oh, Shoot! application.
 
-6.3.1.1 Photoshoot Objects Class
+__6.3.1.1__ Photoshoot Objects Class
 This class represents the information on a given photoshoot object.
 
 
-6.3.1.2 Shoot Display Class
+__6.3.1.2__ Shoot Display Class
 This class displays information from the above class and reacts to input that might manipulate it.
-
+shootDetails: state that just displays the details
+editShoot: state that allows editing, blank when creating a new object 
 createShoot()
 deleteShoot()
 displayInfo()
 editInfo()
 
-6.3.1.3 Express Server Class
+__6.3.1.3__ Express Server Class
 This class runs the GraphQL server.
 app: Express server
 root: provides resolver function for each API endpoint.
 schema: provide GraphQL API schema  
 use()
 
-6.3.1.4 Apollo Client Class
+__6.3.1.4__ Apollo Client Class
 This class uses query and caching help from the Apollo Client.
 client: the Apollo client
 schema: GraphQL API schema
+cache: instance of the clients' `InMemoryCache` class.
 readFragment()
 readQuery()
 useQuery()
 writeFragment()
 writeQuery()
-cache: instance of the clients' `InMemoryCache` class.
 identify()
 modify()
 
-6.3.1.5 React App Class
-This class represents components from the React app.
+__6.3.1.5__ React App Class
+This class represents components from the React app, mostly from Material-UI.
 
-6.3.1.6 Tags Class
+__6.3.1.6__ Tags Class
 This class represents the information on a tag.
 
-6.3.1.7 Search Tags Class
+__6.3.1.7__ Search Tags Class
 This class handles queries of the tags database.
 filterOptions: represents the filter options provided or default to none
 sortOptions: represents the sort options provided or default to recent
 limit: represents the limit of results
 
-6.3.1.8 Display Search Tags Class
+__6.3.1.8__ Display Search Tags Class
 This class displays results from the search and communicates modification inputs.
 result: collection of objects resulting from query
 filter()
 sort()
 
-6.3.1.9 Home Display Class
+__6.3.1.9__ Home Display Class
 This class displays the front page.
 
-6.3.1.10 Navigation Class
+__6.3.1.10__ Navigation Class
 This class deals with navigation between pages, primarily displayed in the banner.
 
 #### 6.3.2 Detailed Interface Descriptions
 The following sections provide the details of all interfaces used in the Oh, Shoot! application.
 
-6.3.2.1 Photoshoot Objects Interface
+__6.3.2.1__ Photoshoot Objects Interface
 This interface sends query results to Shoot Display Interface and Display Search Tags Interface and executes CMD commands from Shoot Display Interface.
 
-6.3.2.2 Shoot Display Interface
+__6.3.2.2__ Shoot Display Interface
 This interface sends queries and CMD instructions to the Photoshoot Objects Interface.
 
-6.3.2.3 Express Server Interface
+__6.3.2.3__ Express Server Interface
 This interface creates the GraphQL server for the Apollo Client interface.
 
-6.3.2.4 Apollo Client Interface
+__6.3.2.4__ Apollo Client Interface
 This interface receives schema and query instructions from Tags and Photoshoot Object Interfaces and sends them to the Express Server Interface.
 
-6.3.2.5 React App Interface
-This interface renders information from the Shoot Display, Display Search Tags, Home Display, and Navigation Interfaces.
+__6.3.2.5__ React App Interface
+This interface renders information from the Shoot Display, Display Search Tags, Home Display, and Navigation Interfaces using Material UI components.
 
-6.3.1.6 Tags Interface
+__6.3.1.6__ Tags Interface
 This interface sends query results to Search Tags Interface and executes CMD commands from .
 
-6.3.1.7 Search Tags Interface
+__6.3.1.7__ Search Tags Interface
 This interface sends queries to Tags Interface and sends results to the Display Tag Interface.  
 
-6.3.1.8 Display Search Tags Interface
+__6.3.1.8__ Display Search Tags Interface
 This interface sends results to Shoot Display and React App Interfaces and sends sort and filter requests to the Search Tags Interface.
 
-6.3.1.9 Home Display Interface
+__6.3.1.9__ Home Display Interface
 This interface supplies information to the React App interface.
 
-6.3.1.10 Navigation Interface
+__6.3.1.10__ Navigation Interface
 This interface supplies information to the React App interface.
 
 #### 6.3.3 Detailed Data Structure Descriptions
@@ -158,3 +162,5 @@ This interface supplies information to the React App interface.
 
 #### 6.4.2 Database Access
 #### 6.4.3 Database Security
+
+__Database security will be addressed further in 402.__
