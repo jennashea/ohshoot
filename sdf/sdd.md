@@ -137,22 +137,41 @@ This interface receives schema and query instructions from Tags and Photoshoot O
 __6.3.2.5__ React App Interface
 This interface renders information from the Shoot Display, Display Search Tags, Home Display, and Navigation Interfaces using Material UI components.
 
-__6.3.1.6__ Tags Interface
+__6.3.2.6__ Tags Interface
 This interface sends query results to Search Tags Interface and executes CMD commands from .
 
-__6.3.1.7__ Search Tags Interface
+__6.3.2.7__ Search Tags Interface
 This interface sends queries to Tags Interface and sends results to the Display Tag Interface.  
 
-__6.3.1.8__ Display Search Tags Interface
+__6.3.2.8__ Display Search Tags Interface
 This interface sends results to Shoot Display and React App Interfaces and sends sort and filter requests to the Search Tags Interface.
 
-__6.3.1.9__ Home Display Interface
+__6.3.2.9__ Home Display Interface
 This interface supplies information to the React App interface.
 
-__6.3.1.10__ Navigation Interface
+__6.3.2.10__ Navigation Interface
 This interface supplies information to the React App interface.
 
 #### 6.3.3 Detailed Data Structure Descriptions
+
+  __6.3.3.1__ Shoot Details Data Structure
+  id: the primary key of the shoots database.
+  name: string
+  subject: string
+  client: string
+  shoot_date{year:YYYY, month:MM, day:DD}: dictionary with integer values
+  shoot_loc: string
+  storage_loc: string
+  Those above represent the information of a single row in the shoots database table.
+  tags\[\]: string\[\] 
+  This represents all of the tags in string format being added to a shoot. This is checked with the tags database to find the id or add a new id, and then both ids will be added to the database. 
+  
+  __6.3.3.2__ Search Results Data Structure
+  search_tags\[\]: string\[\] 
+  This is an 
+  results\[\]: int\[\] 
+  This is an array of all of the shoot ids returned from the search query.
+
 #### 6.3.4 Detailed Design Diagrams
 
 ### 6.4 Database Design and Description
