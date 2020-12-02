@@ -15,75 +15,106 @@ The developers must have access to a computer or cloud instance capable of runni
 Users can access the web app with any standard web browser.
 
   __6.1.2.1__ React.js version 17.0.1
+  
 The front end of the web app will be written in React.js with hooks.
 
   __6.1.2.2__ PostgreSQL version 13.0
+  
 The databases for the app use the PostgreSQL server.
 
   __6.1.2.3__ GraphQL version 15.4.0
+  
 GraphQL allows easy communication with PostgreSQL databases with a customizable API.
 
   __6.1.2.4__ Express version 4.17.1
+  
 Express is a web service framework for JavaScript that works well with GraphQL.
 
   __6.1.2.5__ Apollo Client version 2.6.10
+  
 Apollo Client is a JavaScript data management library that manages the state of communication with the GraphQL back-end.
 
   __6.1.2.6__ Material UI version 4.11.1 
+  
  Material UI is a React component library
 
   __6.1.2.7__ User authentication database
+  
 TBD time allowing.
 
 ### 6.2 Architectural Design
 
 #### 6.2.1 Major Software Components
+
 The major software components are the Front End, the Server, and the Database.
+
 The Front End shall allow clients to interact with the application. They shall have the ability to create, edit, and search through photoshoot objects that are associated with their user.
+
 The Server shall transmit information from the user input to the Database and vice versa.
+
 The Database shall store information on the photoshoot objects, the users, the files, and the tags.
 
 #### 6.2.2 Major Software Interactions
+
 The major software interactions between components are completed in the pipeline between the Front End and the Database.
+
 The Front End receives user input from the UI made in React and communicates it to the Apollo Client. The Apollo Client sends queries to the GraphQL server using Express. GraphQL executes the query in the PostgreSQL database.
+
 GraphQL receives the result and passes it to the Apollo Client. The Apollo Client caches the data and automatically updates the UI component that will display the output.
 
 #### 6.2.3 Architectural Design Diagrams
 ![Architectural Design](/sdf/img/arch_design.png)
 
-due week 10
+
 ### 6.3. CSC and CSU Descriptions
-**Italics means for next semester.**
+
+*Italics means for next semester.*
+
 The CSCs are the Front End CSC, the Back End CSC, and the Database CSC.
-The Front End CSC consists of the Home Page CSU, **Create Account CSU, User Profile CSU,** Search Tags CSU, View Object CSU, and Banner CSU.
-The Back End CSC consists of the Apollo Client CSU, Express GraphQL CSU, GraphQL API CSU, **and the User Info CSU.**
-The Database CSC consists of the **User Database CSU**, Photoshoot Objects Database CSU, and the Tags Database CSU.
+
+The Front End CSC consists of the Home Page CSU, *Create Account CSU, User Profile CSU,* Search Tags CSU, View Object CSU, and Banner CSU.
+
+The Back End CSC consists of the Apollo Client CSU, Express GraphQL CSU, GraphQL API CSU, *and the User Info CSU.*
+
+The Database CSC consists of the *User Database CSU*, Photoshoot Objects Database CSU, and the Tags Database CSU.
 
 #### 6.3.1 Class Descriptions
 The following sections provide the details of all classes used in the Oh, Shoot! application.
 
 __6.3.1.1__ Photoshoot Objects Class
-This class represents the information on a given photoshoot object.
 
+This class represents the information on a given photoshoot object.
+```
+shoot: Shoot
+```
 
 __6.3.1.2__ Shoot Display Class
+
 This class displays information from the above class and reacts to input that might manipulate it.
-shootDetails: state that just displays the details
-editShoot: state that allows editing, blank when creating a new object 
+
+```
+shootDetails: Form
 createShoot()
 deleteShoot()
 displayInfo()
-editInfo()
+```
 
 __6.3.1.3__ Express Server Class
+
 This class runs the GraphQL server.
+
+```
 app: Express server
 root: provides resolver function for each API endpoint.
 schema: provide GraphQL API schema  
 use()
+```
 
 __6.3.1.4__ Apollo Client Class
+
 This class uses query and caching help from the Apollo Client.
+
+```
 client: the Apollo client
 schema: GraphQL API schema
 cache: instance of the clients' `InMemoryCache` class.
@@ -94,67 +125,95 @@ writeFragment()
 writeQuery()
 identify()
 modify()
+```
 
 __6.3.1.5__ React App Class
+
 This class represents components from the React app, mostly from Material-UI.
 
 __6.3.1.6__ Tags Class
+
 This class represents the information on a tag.
 
+```
+tag: Tag
+```
+
 __6.3.1.7__ Search Tags Class
+
 This class handles queries of the tags database.
-filterOptions: represents the filter options provided or default to none
-sortOptions: represents the sort options provided or default to recent
-limit: represents the limit of results
+
+```
+filterOptions: dictionary representing the filter options provided or default to none
+sortOptions: dictionary representing the sort options provided or default to recent
+```
 
 __6.3.1.8__ Display Search Tags Class
+
 This class displays results from the search and communicates modification inputs.
-result: collection of objects resulting from query
-filter()
-sort()
+
+```
+result: Shoot[] 
+filter(filterOptions)
+sort(sortOptions)
+```
 
 __6.3.1.9__ Home Display Class
+
 This class displays the front page.
 
 __6.3.1.10__ Navigation Class
+
 This class deals with navigation between pages, primarily displayed in the banner.
 
 #### 6.3.2 Detailed Interface Descriptions
 The following sections provide the details of all interfaces used in the Oh, Shoot! application.
 
 __6.3.2.1__ Photoshoot Objects Interface
+
 This interface sends query results to Shoot Display Interface and Display Search Tags Interface and executes CMD commands from Shoot Display Interface.
 
 __6.3.2.2__ Shoot Display Interface
+
 This interface sends queries and CMD instructions to the Photoshoot Objects Interface.
 
 __6.3.2.3__ Express Server Interface
+
 This interface creates the GraphQL server for the Apollo Client interface.
 
 __6.3.2.4__ Apollo Client Interface
+
 This interface receives schema and query instructions from Tags and Photoshoot Object Interfaces and sends them to the Express Server Interface.
 
 __6.3.2.5__ React App Interface
+
 This interface renders information from the Shoot Display, Display Search Tags, Home Display, and Navigation Interfaces using Material UI components.
 
 __6.3.2.6__ Tags Interface
+
 This interface sends query results to Search Tags Interface and executes CMD commands from .
 
 __6.3.2.7__ Search Tags Interface
+
 This interface sends queries to Tags Interface and sends results to the Display Tag Interface.  
 
 __6.3.2.8__ Display Search Tags Interface
+
 This interface sends results to Shoot Display and React App Interfaces and sends sort and filter requests to the Search Tags Interface.
 
 __6.3.2.9__ Home Display Interface
+
 This interface supplies information to the React App interface.
 
 __6.3.2.10__ Navigation Interface
+
 This interface supplies information to the React App interface.
 
 #### 6.3.3 Detailed Data Structure Descriptions
 
-  __6.3.3.1__ Shoot Details Data Structure
+  __6.3.3.1__ Shoot Data Structure
+ 
+```
   id: the primary key of the shoots database.
   name: string
   subject: string
@@ -162,20 +221,55 @@ This interface supplies information to the React App interface.
   shoot_date{year:YYYY, month:MM, day:DD}: dictionary with integer values
   shoot_loc: string
   storage_loc: string
-  Those above represent the information of a single row in the shoots database table.
-  tags\[\]: string\[\] 
-  This represents all of the tags in string format being added to a shoot. This is checked with the tags database to find the id or add a new id, and then both ids will be added to the database. 
+  #Those above represent the information of a single row in the shoots database table.
+  tags\[\]:Tag\[\] 
+  #This represents all of the tags in string format being added to a shoot. 
   
-  __6.3.3.2__ Search Results Data Structure
-  search_tags\[\]: string\[\] 
-  This is an 
-  results\[\]: int\[\] 
-  This is an array of all of the shoot ids returned from the search query.
+  update(): Shoot
+  addTag(): Tag
+  newTag(): Tag
+  deleteTag(): Tag
+  updateTags(): int[]
+```
+  
+  
+  __6.3.3.2__ Tags Data Structure
+  
+```
+  id: int
+  tag: string
+```  
+  
+  __6.3.3.3__ Form Data Structure
+
+```
+  editable: bool
+  saveIcon: Icon
+  editIcon: Icon
+  textField: TextField
+  datePicker: TextField
+  tagField: Autocomplete
+  edit(): bool
+  create(): Shoot
+  save(): Shoot
+  delete(): Shoot
+```
 
 #### 6.3.4 Detailed Design Diagrams
 
+![Packages Diagram](/sdf/img/packages.png)
+![Class Diagram](/sdf/img/class_diagram.png)
+![Sequence Diagram](/sdf/img/shoot_sequence.png)
+
 ### 6.4 Database Design and Description
-The database for this app has three tables in a PosgreSQL server. The three tables are `shoot`, `tags`, and   `shoot_tag`. The `shoot` table contains all info about each shoot object as one row and the assigned id as the primary key. The `tags` table contains the unique string of the tag as a row and the assigned id as the primary key. The `shoot_tag` table contains all relationships between shoots and tags using their ids as foreign keys. 
+
+The database for this app has three tables in a PosgreSQL server. The three tables are `shoot`, `tags`, and   `shoot_tag`. 
+
+The `shoot` table contains all info about each shoot object as one row and the assigned id as the primary key. 
+
+The `tags` table contains the unique string of the tag as a row and the assigned id as the primary key. 
+
+The `shoot_tag` table contains all relationships between shoots and tags using their ids as foreign keys. 
 
 #### 6.4.1 Database Design ER Diagram
 
