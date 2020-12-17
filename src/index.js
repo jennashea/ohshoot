@@ -17,7 +17,7 @@ const typeDefs = gql`
 
   type Tags {
     id: ID,
-    tags: String,
+    tag: String,
     photo_ids:[int]
   }
 `;

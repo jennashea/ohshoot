@@ -15,31 +15,31 @@ The developers must have access to a computer or cloud instance capable of runni
 Users can access the web app with any standard web browser.
 
   __6.1.2.1__ React.js version 17.0.1
-  
+
 The front end of the web app will be written in React.js with hooks.
 
   __6.1.2.2__ PostgreSQL version 13.0
-  
+
 The databases for the app use the PostgreSQL server.
 
   __6.1.2.3__ GraphQL version 15.4.0
-  
+
 GraphQL allows easy communication with PostgreSQL databases with a customizable API.
 
   __6.1.2.4__ Express version 4.17.1
-  
+
 Express is a web service framework for JavaScript that works well with GraphQL.
 
   __6.1.2.5__ Apollo Client version 2.6.10
-  
+
 Apollo Client is a JavaScript data management library that manages the state of communication with the GraphQL back-end.
 
-  __6.1.2.6__ Material UI version 4.11.1 
-  
+  __6.1.2.6__ Material UI version 4.11.1
+
  Material UI is a React component library
 
   __6.1.2.7__ User authentication database
-  
+
 TBD time allowing.
 
 ### 6.2 Architectural Design
@@ -84,48 +84,42 @@ The following sections provide the details of all classes used in the Oh, Shoot!
 __6.3.1.1__ Photoshoot Objects Class
 
 This class represents the information on a given photoshoot object.
-```
-shoot: Shoot
-```
+
++ shoot: Shoot
 
 __6.3.1.2__ Shoot Display Class
 
 This class displays information from the above class and reacts to input that might manipulate it.
 
-```
-shootDetails: Form
-createShoot()
-deleteShoot()
-displayInfo()
-```
++ shootDetails: Form
++ createShoot()
++ deleteShoot()
++ displayInfo()
 
 __6.3.1.3__ Express Server Class
 
 This class runs the GraphQL server.
 
-```
-app: Express server
-root: provides resolver function for each API endpoint.
-schema: provide GraphQL API schema  
-use()
-```
++ app: Express server
++ root: provides resolver function for each API endpoint.
++ schema: provide GraphQL API schema  
++ use()
 
 __6.3.1.4__ Apollo Client Class
 
 This class uses query and caching help from the Apollo Client.
 
-```
-client: the Apollo client
-schema: GraphQL API schema
-cache: instance of the clients' `InMemoryCache` class.
-readFragment()
-readQuery()
-useQuery()
-writeFragment()
-writeQuery()
-identify()
-modify()
-```
++ client: the Apollo client
++ schema: GraphQL API schema
++ cache: instance of the clients' `InMemoryCache` class.
++ readFragment()
++ readQuery()
++ useQuery()
++ writeFragment()
++ writeQuery()
++ identify()
++ modify()
+
 
 __6.3.1.5__ React App Class
 
@@ -135,28 +129,22 @@ __6.3.1.6__ Tags Class
 
 This class represents the information on a tag.
 
-```
-tag: Tag
-```
++ tag: Tag
 
 __6.3.1.7__ Search Tags Class
 
 This class handles queries of the tags database.
 
-```
-filterOptions: dictionary representing the filter options provided or default to none
-sortOptions: dictionary representing the sort options provided or default to recent
-```
++ filterOptions: dictionary representing the filter options provided or default to none
++ sortOptions: dictionary representing the sort options provided or default to recent
 
 __6.3.1.8__ Display Search Tags Class
 
 This class displays results from the search and communicates modification inputs.
 
-```
-result: Shoot[] 
-filter(filterOptions)
-sort(sortOptions)
-```
++ result: Shoot[]
++ filter(filterOptions)
++ sort(sortOptions)
 
 __6.3.1.9__ Home Display Class
 
@@ -212,48 +200,44 @@ This interface supplies information to the React App interface.
 #### 6.3.3 Detailed Data Structure Descriptions
 
   __6.3.3.1__ Shoot Data Structure
- 
-```
-  id: the primary key of the shoots database.
-  name: string
-  subject: string
-  client: string
-  shoot_date{year:YYYY, month:MM, day:DD}: dictionary with integer values
-  shoot_loc: string
-  storage_loc: string
-  #Those above represent the information of a single row in the shoots database table.
-  tags\[\]:Tag\[\] 
-  #This represents all of the tags in string format being added to a shoot. 
-  
-  update(): Shoot
-  addTag(): Tag
-  newTag(): Tag
-  deleteTag(): Tag
-  updateTags(): int[]
-```
-  
-  
+
+  - id: the primary key of the shoots database.
+  - name: string
+  - subject: string
+  - client: string
+  - shoot_date{year:YYYY, month:MM, day:DD}: dictionary with integer values
+  - shoot_loc: string
+  - storage_loc: string
+  Those above represent the information of a single row in the shoots database table.
+  - tags\[\]:Tag\[\]
+  This represents all of the tags in string format being added to a shoot.
+
+  - update(): Shoot
+  - addTag(): Tag
+  - newTag(): Tag
+  - deleteTag(): Tag
+  - updateTags(): int[]
+
+
+
   __6.3.3.2__ Tags Data Structure
-  
-```
-  id: int
-  tag: string
-```  
-  
+
+  - id: int
+  - tag: string
+
+
   __6.3.3.3__ Form Data Structure
 
-```
-  editable: bool
-  saveIcon: Icon
-  editIcon: Icon
-  textField: TextField
-  datePicker: TextField
-  tagField: Autocomplete
-  edit(): bool
-  create(): Shoot
-  save(): Shoot
-  delete(): Shoot
-```
+  - editable: bool
+  - saveIcon: Icon
+  - editIcon: Icon
+  - textField: TextField
+  - datePicker: TextField
+  - tagField: Autocomplete
+  - edit(): bool
+  - create(): Shoot
+  - save(): Shoot
+  - delete(): Shoot
 
 #### 6.3.4 Detailed Design Diagrams
 
@@ -263,26 +247,26 @@ This interface supplies information to the React App interface.
 
 ### 6.4 Database Design and Description
 
-The database for this app has three tables in a PosgreSQL server. The three tables are `shoot`, `tags`, and   `shoot_tag`. 
+The database for this app has three tables in a PosgreSQL server. The three tables are `shoot`, `tags`, and   `shoot_tag`.
 
-The `shoot` table contains all info about each shoot object as one row and the assigned id as the primary key. 
+The `shoot` table contains all info about each shoot object as one row and the assigned id as the primary key.
 
-The `tags` table contains the unique string of the tag as a row and the assigned id as the primary key. 
+The `tags` table contains the unique string of the tag as a row and the assigned id as the primary key.
 
-The `shoot_tag` table contains all relationships between shoots and tags using their ids as foreign keys. 
+The `shoot_tag` table contains all relationships between shoots and tags using their ids as foreign keys.
 
 #### 6.4.1 Database Design ER Diagram
 
 ![Database Schema](/sdf/img/db_erd.png)
 
 #### 6.4.2 Database Access
-The database will be accessed through GraphQL and Apollo client. 
+The database will be accessed through GraphQL and Apollo client.
 
-The `shoot` table can have a row added to it when a new shoot is created, can have a row edited when any info of the shoot is edited, and can have a row deleted if the shoot is deleted. The queries involving this table include fetching information on individual shoots based on id which can be further sorted. 
+The `shoot` table can have a row added to it when a new shoot is created, can have a row edited when any info of the shoot is edited, and can have a row deleted if the shoot is deleted. The queries involving this table include fetching information on individual shoots based on id which can be further sorted.
 
 The `tags` table will be added to when a new unique tag string is added to any shoot. If the tag is not new, then no further action is needed.
 
-Any addition to the tags of a shoot will add a row to the `shoot_tags` table and any removal of a tag from the shoot will delete the row associated. 
+Any addition to the tags of a shoot will add a row to the `shoot_tags` table and any removal of a tag from the shoot will delete the row associated.
 
 #### 6.4.3 Database Security
 
